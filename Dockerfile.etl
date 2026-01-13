@@ -1,0 +1,7 @@
+FROM nyc-taxi-base:latest
+
+# Copy ETL script
+COPY etl.py .
+
+# Run ETL job
+CMD ["python", "etl.py"]

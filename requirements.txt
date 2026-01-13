@@ -1,0 +1,13 @@
+# ETL Dependencies (PySpark + Iceberg)
+pyspark==3.5.0
+pyiceberg[hive]==0.6.1
+
+# API Dependencies (FastAPI)
+fastapi==0.104.1
+uvicorn==0.24.0
+pandas==2.1.4
+pyarrow==14.0.1
+
+# Shared Dependencies
+requests==2.31.0
+setuptools==69.0.0

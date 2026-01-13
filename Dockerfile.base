@@ -1,0 +1,14 @@
+FROM python:3.11-slim
+
+# Install Java + curl (required for PySpark and downloading JARs)
+RUN apt-get update && apt-get install -y openjdk-21-jre-headless curl && rm -rf /var/lib/apt/lists/*
+
+# Set Java environment
+ENV JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+
+# Set working directory
+WORKDIR /app
+
+# Copy and install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
